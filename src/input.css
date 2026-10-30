@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+  --shadow-figma: 0 3px 15.4px -1px rgba(60, 42, 42, 0.04);
+}
