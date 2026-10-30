@@ -5,40 +5,156 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gabrielle's Portfolio</title>
   <link rel="stylesheet" href="./dist/styles.css">
+  <style>
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .animate-blink {
+            animation: blink 0.9s infinite;
+        }
+  </style>
 </head>
 <body class="bg-[#FDFDFD] gap-x-4 font-inter font-semibold scroll-smooth">
     <div class="grid grid-cols-12">
-        <header class="sticky top-5 col-span-8 col-start-3 flex gap-x-5 backdrop-blur-[1.5px] items-center bg-[#FAFAFA]/60 rounded-[50px] text-[20px] shadow-figma px-10 py-5">
-            <a href="#" class="mr-auto">gabriellemac</a>
-            <a href="#about-me">about me</a>
-            <span>projects</span>
-            <span>contact</span>
+
+        <header class="z-50 sticky top-5 col-span-8 col-start-3 flex gap-x-5 backdrop-blur-[1.5px] items-center bg-[#FAFAFA]/60 rounded-[50px] text-[20px] shadow-figma px-10 py-5 backdrop-hue-rotate-90">
+            <a href="#" class="mr-auto hover:text-neutral-500 transition-colors">gabriellemac</a>
+            <a href="#about-me" class="hover:text-neutral-500 transition-colors">about me</a>
+            <a href="#projects" class="hover:text-neutral-500 transition-colors">projects</a>
+            <a href="#contact" class="hover:text-neutral-500 transition-colors">contact</a>
         </header>
+
+
         <div class="col-span-6 col-start-4 mt-20">
-            <div class="grid grid-cols-2 items-center" id="about-me">
-                <div>
+            <div class="grid grid-cols-3 items-center scroll-mt-[100px]" id="about-me">
+                <div class="col-span-2">
                     <div class="text-[15px] opacity-60 italic">about me</div>
-                    <div class="font-bold text-[35px]">hi. i'm gabrielle.</div>
-                    <div class="w-[80%] text-[20px]/[110%]">cs student at the university of warwick. here is some filler text.</div>
+                    <span class="font-bold text-[35px]" id="typing-text"></span><span class="inline-block w-[3px] h-[35px] bg-current ml-1 align-middle animate-blink mb-5"></span>
+                    <div class="w-[80%] text-[20px]/[110%] border-[1.5px] border-dashed border-[#a1a1aa] rounded-lg p-2">cs student at the university of warwick. i love all things computers, low-level backend systems & web tooling. hit me up.</div>
                 </div>
                 <div class="justify-self-end mr-[10px]">
                     <img class="rounded-[100px] w-32 h-32" src="assets/img.jpg" alt="Image of GitHub pfp">
                 </div>
             </div>
+
+
             <div class="mt-10 pb-2 border-b-[5px] border-black/50 border-solid flex justify-between items-center text-black/80 font-semibold">
-                <span>brighton, uk • 00:30am bst</span>
+                <span id="time">brighton, uk • 00:30am bst</span>
                 <a href="mailto:gabriellemaciunaite@gmail.com" class="hover:underline">gabriellemaciunaite@gmail.com</a>
             </div>
-            <div class="mt-5">
-                <div>series</div>
-                <div class="mt-[50px]">of</div>
-                <div class="mt-[50px]">divs</div>
-                <div class="mt-[50px]">for</div>
-                <div class="mt-[50px]">testing</div>
-                <div class="mt-[50px]">please</div>
-                <div class="mt-[50px]">ignore</div>
+
+
+            <div class="grid grid-cols-2 gap-4 mt-10">
+                <div class="bg-[#FAFAFA] rounded-2xl p-8 min-h-[360px]">
+                    <h3 class="text-[24px] font-medium opacity-60 mb-4">what i work with</h3>
+
+                </div>
+                <div class="grid grid-rows-2 gap-4">
+                    <div class="bg-[#FAFAFA] rounded-2xl p-8 min-h-[180px]">
+                        <h3 class="text-[24px] font-medium opacity-60 mb-4 text-right">what drives me</h3>
+                    </div>
+                    <div class="bg-[#FAFAFA] rounded-2xl p-8 min-h-[180px]">
+                        <h3 class="text-[24px] font-medium opacity-60 text-center mt-4">education</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mt-15 pb-2 border-b-[5px] border-black/50 border-solid flex justify-between items-center text-black/80 font-semibold"></div>
+
+            <div class="text-[15px] opacity-60 italic mt-10 scroll-mt-[100px]" id="projects">projects</div>
+            <div class="mt-5 grid grid-cols-3 items-start gap-15">
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
+                    <img src="assets/img.jpg" alt="Filler image for project 1" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                    <h4 class="mt-3 font-bold text-[18px] opacity-70">running analytics web app</h4>
+                    <p class="text-[14px] opacity-70 mt-1">stack: python, flask, html, css, javascript, docker, redis, celery</p>
+                </div>
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
+                    <img src="assets/img.jpg" alt="Filler image for project 2" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                    <h4 class="mt-3 font-bold text-[18px] opacity-70">distributed rate limiter</h4>
+                    <p class="text-[14px] opacity-70 mt-1">stack: typescript, node.js, express, redis, lua, vitest, autocannon</p>
+                </div>
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
+                    <img src="assets/img.jpg" alt="Filler image for project 3" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                    <h4 class="mt-3 font-bold text-[18px] opacity-70">pomodoro web extension</h4>
+                    <p class="text-[14px] opacity-70 mt-1">stack: javascript, webextensions api, html, css</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
+                    <img alt="Filler image for project 4" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                    <h4 class="mt-3 font-bold text-[18px] opacity-70">project 4</h4>
+                    <p class="text-[14px] opacity-70 mt-1">stack: n/a</p>
+                </div>
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
+                    <img alt="Filler image for project 5" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                    <h4 class="mt-3 font-bold text-[18px] opacity-70">project 5</h4>
+                    <p class="text-[14px] opacity-70 mt-1">stack: n/a</p>
+                </div>
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
+                    <img alt="Filler image for project 6" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                    <h4 class="mt-3 font-bold text-[18px] opacity-70">project 6</h4>
+                    <p class="text-[14px] opacity-70 mt-1">stack: n/a</p>
+                </div>
+            </div>
+
+            <div class="mt-15 pb-2 border-b-[5px] border-black/50 border-solid flex justify-between items-center text-black/80 font-semibold"></div>
+
+            <div class="text-[15px] opacity-60 italic mt-10" id="contact">contact</div>
+            <div class="mb-30">
+                <div class="col-span-3 grid grid-cols-3 items-center mb-2">
+                    <a href="https://www.github.com/gabriellemaciunaite" class="col-span-2 opacity-60 font-semibold text-[24px]">github.com/gabriellemaciunaite</a>
+                    <div class="col-span-1 text-right font-bold text-[36px] opacity-80">github</div>
+                </div>
+                <div class="col-span-3 grid grid-cols-3 items-center mb-2">
+                    <a href="https://www.linkedin.com/in/gabrielle-maciunaite" class="col-span-2 opacity-60 font-semibold text-[24px]">linkedin.com/in/gabrielle-maciunaite</a>
+                    <div class="col-span-1 text-right font-bold text-[36px] opacity-80">linkedin</div>
+                </div>
+                <div class="col-span-3 grid grid-cols-3 items-center">
+                    <a href="mailto:gabriellemaciunaite@gmail.com" class="col-span-2 opacity-60 font-semibold text-[24px]">gabriellemaciunaite@gmail.com</a>
+                    <div class="col-span-1 text-right font-bold text-[36px] opacity-80">email</div>
+                </div>
             </div>
         </div>
     </div>
 </body>
+
+<script>
+    function updateBrightonTime() {
+        const options = {
+            timeZone: 'Europe/London',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true
+        };
+        const formatter = new Intl.DateTimeFormat('en-GB', options);
+        const timeString = formatter.format(new Date()).toLowerCase();
+
+        const isBST = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', timeZoneName: 'short' })
+        .formatToParts(new Date())
+        .some(part => part.type === 'timeZoneName' && part.value === 'BST');
+
+        const tzLabel = isBST ? 'bst' : 'gmt';
+        const element = document.getElementById('time');
+        if (element) element.textContent = `brighton, uk • ${timeString} ${tzLabel}`;
+    }
+
+    updateBrightonTime();
+    setInterval(updateBrightonTime, 1000);
+
+    const text = "hi. i'm gabrielle.";
+    const speed = 100;
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            document.getElementById('typing-text').textContent += text.charAt(index);
+            index++;
+            setTimeout(type, speed);
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', type);
+</script>
 </html>
