@@ -15,84 +15,163 @@
         }
   </style>
 </head>
-<body class="bg-[#FDFDFD] gap-x-4 font-inter font-semibold scroll-smooth">
+<body class="bg-[url('../assets/bg.jpg')] bg-cover bg-center bg-fixed min-h-screen gap-x-4 font-inter font-semibold scroll-smooth">
     <div class="grid grid-cols-12">
 
-        <header class="z-50 sticky top-5 col-span-8 col-start-3 flex gap-x-5 backdrop-blur-[1.5px] items-center bg-[#FAFAFA]/60 rounded-[50px] text-[20px] shadow-figma px-10 py-5 backdrop-hue-rotate-90">
-            <a href="#" class="mr-auto hover:text-neutral-500 transition-colors">gabriellemac</a>
+        <header class="z-50 sticky top-5 col-span-8 col-start-3 flex gap-x-5 backdrop-blur-[1.5px] items-center bg-[#FAFAFA]/25 rounded-[50px] text-[20px] shadow-figma px-10 py-5 backdrop-hue-rotate-90">
+            <a href="#" class="mr-auto hover:text-neutral-500 transition-colors font-bold">gabriellemac</a>
             <a href="#about-me" class="hover:text-neutral-500 transition-colors">about me</a>
             <a href="#projects" class="hover:text-neutral-500 transition-colors">projects</a>
             <a href="#contact" class="hover:text-neutral-500 transition-colors">contact</a>
         </header>
 
 
-        <div class="col-span-6 col-start-4 mt-20">
+        <div class="col-span-6 col-start-4 mt-25">
             <div class="grid grid-cols-3 items-center scroll-mt-[100px]" id="about-me">
                 <div class="col-span-2">
-                    <div class="text-[15px] opacity-60 italic">about me</div>
+                    <div class="text-[15px] opacity-60 italic font-mono">about me</div>
                     <span class="font-bold text-[35px]" id="typing-text"></span><span class="inline-block w-[3px] h-[35px] bg-current ml-1 align-middle animate-blink mb-5"></span>
-                    <div class="w-[80%] text-[20px]/[110%] border-[1.5px] border-dashed border-[#a1a1aa] rounded-lg p-2">cs student at the university of warwick. i love all things computers, low-level backend systems & web tooling. hit me up.</div>
+                    
+                    <div class="relative w-[80%] text-[20px]/[110%] opacity-80 pb-4">
+                        <p class="relative z-10 [mask-image:linear-gradient(to_top,black_50%,transparent_100%)]">
+                            cs student at the university of warwick. i love all things computers, low-level backend systems & web tooling. hit me up.
+                        </p>
+                        
+                        <p class="absolute inset-0 z-0 blur-[0.4px] [mask-image:linear-gradient(to_top,transparent_50%,black_100%)]">
+                            cs student at the university of warwick. i love all things computers, low-level backend systems & web tooling. hit me up.
+                        </p>
+                    </div>
                 </div>
                 <div class="justify-self-end mr-[10px]">
-                    <img class="rounded-[100px] w-32 h-32" src="assets/img.jpg" alt="Image of GitHub pfp">
+                    <img class="w-32 h-32 shadow-2xl rounded-full" src="assets/img.jpg" alt="Image of GitHub pfp">
                 </div>
             </div>
 
 
-            <div class="mt-10 pb-2 border-b-[5px] border-black/50 border-solid flex justify-between items-center text-black/80 font-semibold">
+            <div class="mt-30 pb-2 border-b-[5px] border-black/50 border-double flex justify-between items-center text-black/80 font-mono">
                 <span id="time">brighton, uk • 00:30am bst</span>
                 <a href="mailto:gabriellemaciunaite@gmail.com" class="hover:underline">gabriellemaciunaite@gmail.com</a>
             </div>
 
 
-            <div class="grid grid-cols-2 gap-4 mt-10">
-                <div class="bg-[#FAFAFA] rounded-2xl p-8 min-h-[360px]">
-                    <h3 class="text-[24px] font-medium opacity-60 mb-4">what i work with</h3>
 
-                </div>
-                <div class="grid grid-rows-2 gap-4">
-                    <div class="bg-[#FAFAFA] rounded-2xl p-8 min-h-[180px]">
-                        <h3 class="text-[24px] font-medium opacity-60 mb-4 text-right">what drives me</h3>
+
+
+
+            <div class="grid grid-cols-2 gap-4 mt-10 items-stretch">
+                <div class="bg-[#FAFAFA]/70 rounded-2xl p-6 h-[160px] hover:bg-[#f5f5f5]/70 transition-all duration-200 ease-in-out h-full">
+                    <h3 class="text-[18px] font-medium opacity-60 mb-4 font-mono">what i work with</h3>
+                    <div class="space-y-5">
+                        <div>
+                            <span class="text-[10px] uppercase text-neutral-400 block mb-1 font-mono">languages</span>
+                            <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">python</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">typescript</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">javascript</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">lua</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">sql</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">c</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="text-[10px] uppercase text-neutral-400 block mb-1 font-mono">backend & infra</span>
+                            <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">flask</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">node.js</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">redis</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">celery</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">docker</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="text-[10px] uppercase text-neutral-400 block mb-2 font-mono">tooling</span>
+                            <div class="flex flex-wrap gap-1.5 text-xs mb-8 font-mono">
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">webextensions api</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">vitest</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">autocannon</span>
+                                <span class="px-2 py-0.5 bg-white rounded border border-neutral-200">git</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-[#FAFAFA] rounded-2xl p-8 min-h-[180px]">
-                        <h3 class="text-[24px] font-medium opacity-60 text-center mt-4">education</h3>
+                    <a href="assets/cv.pdf" class="text-[10px] uppercase text-neutral-400 block" download="GabrielleMaciunaite_CV.pdf">[download resume]</a>
+                </div>
+                <div class="grid grid-rows-2 gap-4 h-full">
+                    <div class="bg-[#FAFAFA]/70 rounded-2xl p-6 min-h-[80px] hover:bg-[#f5f5f5]/70 transition-all duration-200 ease-in-out">
+                        <h3 class="text-[18px] font-medium opacity-60 mb-4 font-mono">what drives me</h3>
+                        <p class="text-xs text-neutral-600 leading-relaxed font-mono lowercase">
+                        Building backend systems, scalable architectures, and lightweight dev tools. seeking software engineering internships for summer 2027.
+                        </p>
+                    </div>
+                    <div class="bg-[#FAFAFA]/70 rounded-2xl p-6 min-h-[80px] hover:bg-[#f5f5f5]/70 transition-all duration-200 ease-in-out">
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3 relative">
+                                <div class="w-3 h-3 rounded-full border border-neutral-400 bg-amber-100 shrink-0 mt-1"></div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-baseline">
+                                        <h3 class="text-xs font-bold font-mono">warwick university</h3>
+                                        <span class="text-[10px] font-mono text-neutral-400">2025-2028</span>
+                                    </div>
+                                    <p class="text-[11px] text-neutral-500 font-mono">computer science bsc, hons</p>
+                                </div>
+                            </div>
+
+                            <div class="w-[1px] h-3 bg-neutral-300 ml-[5px] "></div>
+
+                            <div class="flex items-start gap-3 relative">
+                                <div class="w-3 h-2 rounded-full border border-neutral-300 bg-white shrink-0 mt-1"></div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-baseline">
+                                        <h3 class="text-xs font-bold font-mono">cardinal newman college</h3>
+                                        <span class="text-[10px] font-mono text-neutral-400">2023-2025</span>
+                                    </div>
+                                    <p class="text-[11px] text-neutral-500 font-mono">cs, maths, physics a-levels</p>
+                                </div>
+                            </div>
+                            <h3 class="text-[18px] font-medium opacity-60 text-right mt-4 font-mono">education</h3>
+                        </div>
                     </div>
                 </div>
             </div>
 
 
+
+
+
+
             <div class="mt-15 pb-2 border-b-[5px] border-black/50 border-solid flex justify-between items-center text-black/80 font-semibold"></div>
 
-            <div class="text-[15px] opacity-60 italic mt-10 scroll-mt-[100px]" id="projects">projects</div>
+            <div class="text-[15px] opacity-60 italic mt-10 scroll-mt-[100px] font-mono" id="projects">projects</div>
             <div class="mt-5 grid grid-cols-3 items-start gap-15">
-                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
-                    <img src="assets/img.jpg" alt="Filler image for project 1" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
-                    <h4 class="mt-3 font-bold text-[18px] opacity-70">running analytics web app</h4>
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md group">
+                    <img class="bg-[#FAFAFA] rounded-[30px] w-40 h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <h4 class="mt-3 font-bold text-[18px] opacity-70">running analytics app</h4>
                     <p class="text-[14px] opacity-70 mt-1">stack: python, flask, html, css, javascript, docker, redis, celery</p>
                 </div>
-                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
-                    <img src="assets/img.jpg" alt="Filler image for project 2" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md group">
+                    <img class="bg-[#FAFAFA] rounded-[30px] w-40 h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <h4 class="mt-3 font-bold text-[18px] opacity-70">distributed rate limiter</h4>
                     <p class="text-[14px] opacity-70 mt-1">stack: typescript, node.js, express, redis, lua, vitest, autocannon</p>
                 </div>
-                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
-                    <img src="assets/img.jpg" alt="Filler image for project 3" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md group">
+                    <img class="bg-[#FAFAFA] rounded-[30px] w-40 h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <h4 class="mt-3 font-bold text-[18px] opacity-70">pomodoro web extension</h4>
                     <p class="text-[14px] opacity-70 mt-1">stack: javascript, webextensions api, html, css</p>
                 </div>
 
-                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
-                    <img alt="Filler image for project 4" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md group">
+                    <img class="bg-[#FAFAFA] rounded-[30px] w-40 h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <h4 class="mt-3 font-bold text-[18px] opacity-70">project 4</h4>
                     <p class="text-[14px] opacity-70 mt-1">stack: n/a</p>
                 </div>
-                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
-                    <img alt="Filler image for project 5" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md group">
+                    <img class="bg-[#FAFAFA] rounded-[30px] w-40 h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <h4 class="mt-3 font-bold text-[18px] opacity-70">project 5</h4>
                     <p class="text-[14px] opacity-70 mt-1">stack: n/a</p>
                 </div>
-                <div class="flex flex-col items-center text-center px-4 drop-shadow-md">
-                    <img alt="Filler image for project 6" class="bg-[#FAFAFA] rounded-[30px] w-24 h-24 object-cover">
+                <div class="flex flex-col items-center text-center px-4 drop-shadow-md group">
+                    <img class="bg-[#FAFAFA] rounded-[30px] w-40 h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                     <h4 class="mt-3 font-bold text-[18px] opacity-70">project 6</h4>
                     <p class="text-[14px] opacity-70 mt-1">stack: n/a</p>
                 </div>
@@ -100,14 +179,17 @@
 
             <div class="mt-15 pb-2 border-b-[5px] border-black/50 border-solid flex justify-between items-center text-black/80 font-semibold"></div>
 
-            <div class="text-[15px] opacity-60 italic mt-10" id="contact">contact</div>
+
+
+
+            <div class="text-[15px] opacity-60 italic mt-10 font-mono" id="contact">contact</div>
             <div class="mb-30">
                 <div class="col-span-3 grid grid-cols-3 items-center mb-2">
                     <a href="https://www.github.com/gabriellemaciunaite" class="col-span-2 opacity-60 font-semibold text-[24px]">github.com/gabriellemaciunaite</a>
                     <div class="col-span-1 text-right font-bold text-[36px] opacity-80">github</div>
                 </div>
                 <div class="col-span-3 grid grid-cols-3 items-center mb-2">
-                    <a href="https://www.linkedin.com/in/gabrielle-maciunaite" class="col-span-2 opacity-60 font-semibold text-[24px]">linkedin.com/in/gabrielle-maciunaite</a>
+                    <a href="https://www.linkedin.com/in/gabrielle-maciunaite" class="col-span-2 opacity-60 font-semibold text-[24px] border-2 border-dashed rounded-xl p-1">linkedin.com/in/gabrielle-maciunaite</a>
                     <div class="col-span-1 text-right font-bold text-[36px] opacity-80">linkedin</div>
                 </div>
                 <div class="col-span-3 grid grid-cols-3 items-center">
